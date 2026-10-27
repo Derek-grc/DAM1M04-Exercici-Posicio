@@ -3,7 +3,114 @@
     <head>
         <meta charset="UTF-8">
         <title>UrbanLook - Contacte </title>
+        <link rel="stylesheet" href="global.css">
     </head>
+
+    <style>
+            /* Títol de la pàgina */
+            .titol-pagina {
+                text-align: center;
+                background-color: darkblue;
+                color: white;
+                padding: 60px 20px;
+                border-radius: 4px;
+            }
+
+            .titol-pagina h1 {
+                font-size: 2.5em;
+                margin-bottom: 10px;
+            }
+
+            .titol-pagina p {
+                font-size: 1.1em;
+                margin: 0;
+            }
+
+            /* Layout amb Grid de 2 columnes */
+            .contacte-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                margin-top: 40px;
+            }
+
+            /* Cartes (mateix estil que les col·leccions de l'index) */
+            .columna {
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 6px black;
+            }
+
+            .columna h3 {
+                margin-top: 0;
+            }
+
+            /* Formulari */
+            form label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+                margin-top: 15px;
+            }
+
+            form input,
+            form textarea {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 10px;
+                border: 1px solid gray;
+                border-radius: 4px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+            }
+
+            form textarea {
+                resize: vertical;
+            }
+
+            form button {
+                margin-top: 20px;
+                background: blue;
+                color: black;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                font-weight: bold;
+                font-size: 1em;
+                cursor: pointer;
+            }
+
+            form button:hover {
+                background: darkblue;
+                color: white;
+            }
+
+            /* Informació de contacte */
+            .info p {
+                margin: 8px 0;
+            }
+
+            /* Mapa fictici */
+            .mapa {
+                background: lightgray;
+                height: 200px;
+                margin-top: 20px;
+                border-radius: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                color: #222;
+            }
+
+            /* Responsive: una sola columna en pantalles petites */
+            @media (max-width: 700px) {
+                .contacte-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+    </style>
 
     <body>
         <nav>
@@ -12,8 +119,44 @@
             <a href="contacte.html">Contacte</a>
         </nav>
 
+        <div class="contenidor">
+            <section class="titol-pagina">
+                <h1>Contacta amb nosaltres</h1>
+                <p>Tens algun dubte? Escriu-nos i et respondrem aviat</p>
+            </section>
+
+            <section class="contacte-grid">
+                <!-- Columna A: formulari -->
+                <div class="columna">
+                    <h3>Envia'ns un missatge</h3>
+                    <form>
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" placeholder="El teu nom">
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="correu@exemple.cat">
+
+                        <label for="missatge">Missatge</label>
+                        <textarea id="missatge" name="missatge" rows="6" placeholder="Escriu aquí el teu missatge"></textarea>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+
+                <!-- Columna B: informació + mapa -->
+                <div class="columna info">
+                    <h3>Informació de contacte</h3>
+                    <p><strong>Adreça:</strong> Carrer Bonavista, 70, 08940 Cornellà de Llobregat, Barcelona</p>
+                    <p><strong>Horari:</strong> Dilluns a dissabte, de 9:00 a 21:30</p>
+                    <p><strong>Telèfon:</strong> 933 77 11 00</p>
+
+                    <div class="mapa"></div>
+                </div>
+            </section>
+        </div>
+
         <footer>
-            &copy; 2025 UrbanLook · info@urbanlook.cat
+            &copy; 2026 UrbanLook · info@urbanlook.cat
         </footer>
     </body>
 </html>

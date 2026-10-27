@@ -2,8 +2,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ca">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="global.css">
         <title>UrbanLook - Productes </title>
     </head>
+
+    <style>
+        /* Barra de filtres */
+        .filtres {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Grid de productes amb Flex */
+        .productes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .targeta {
+            flex: 1 1 260px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 6px black;
+            overflow: hidden;
+            text-align: center;
+        }
+
+    </style>
 
     <body>
         <nav>
@@ -12,8 +38,45 @@
             <a href="contacte.html">Contacte</a>
         </nav>
 
+        <div class="contenidor">
+            <h1>Productes</h1>
+
+            <div class="filtres">
+                <button>Tots</button>
+                <button>Home</button>
+                <button>Dona</button>
+                <button>Accessoris</button>
+            </div>
+
+            <div class="productes">
+                <div class="targeta">
+                    <img src="https://static3.depositphotos.com/1006282/208/i/450/depositphotos_2087872-stock-photo-denim-jacket.jpg" width="150"></img>
+                    <h3>Jaqueta texana</h3>
+                    <p>49,90 €</p>
+                </div>
+                
+                <div class="targeta">
+                    <img src="https://www.soloepis.com/13954-large_default/camiseta-algodon-varios-colores.jpg" width="100">
+                    <h3>Samarreta blava</h3>
+                    <p>19,95 €</p>
+                </div>
+
+                <div class="targeta">
+                    <img src="https://st3.depositphotos.com/1025801/32920/i/450/depositphotos_329205324-stock-photo-jean-or-blue-jeans-with.jpg" width="100">
+                    <h3>Pantalons texans</h3>
+                    <p>39,95 €</p>
+                </div>
+
+                <div class="targeta">
+                    <img src="https://static7.depositphotos.com/1040166/759/i/450/depositphotos_7591611-stock-photo-blue-baseball.jpg" width="125">
+                    <h3>Gorra blava</h3>
+                    <p>14,95 €</p>
+                </div>
+            </div>
+        </div>
+
         <footer>
-            &copy; 2025 UrbanLook · info@urbanlook.cat
+            &copy; 2026 UrbanLook · info@urbanlook.cat
         </footer>
     </body>
 </html>
